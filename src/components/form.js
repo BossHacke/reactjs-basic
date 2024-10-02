@@ -1,11 +1,17 @@
 import React from "react";
+import Prop from "./props";
 
 
 class Form extends React.Component {
 
     state = {
         firstName: '',
-        lastName: ''
+        lastName: '',
+        arrJobs: [
+            { id: 'abcJob1', title: 'Developers', salary: '500 $' },
+            { id: 'abcJob2', title: 'Testers', salary: '400 $' },
+            { id: 'abcJob3', title: 'Project managers', salary: '1000 $' }
+        ],
     }
 
 
@@ -40,6 +46,7 @@ class Form extends React.Component {
                     <input type="text" value={this.state.lastName} onChange={(event) => { this.onHandleLastName(event) }} /><br />
                     <input type="submit" value="Submit" onClick={(event) => { this.onHandleSubmit(event) }} />
                 </form >
+                <Prop name={'Hung'} age={'23'} arrJobs={this.state.arrJobs} />
             </>
         );
     }
