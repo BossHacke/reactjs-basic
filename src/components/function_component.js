@@ -1,5 +1,6 @@
 import React from "react";
 
+//dùng function component thì nên dùng vs hook
 const FunctionComponent = (props) => {
 
     let { arrJobs } = props;
@@ -9,13 +10,15 @@ const FunctionComponent = (props) => {
             <div>
                 {
                     arrJobs.map((item, index) => {
-                        return (
-                            <>
-                                <div>
-                                    {item.title} - {item.salary}
-                                </div>
-                            </>
-                        )
+                        if (item.salary > 300) {
+                            return (
+                                <>
+                                    <div>
+                                        {item.title} - {item.salary}
+                                    </div>
+                                </>
+                            )
+                        }
                     })
                 }
             </div>

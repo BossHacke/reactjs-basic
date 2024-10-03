@@ -1,6 +1,6 @@
 import React from "react";
-// import Prop from "./props";
-import FunctionComponent from "./function_component";
+import Prop from "./props";
+// import FunctionComponent from "./function_component";
 
 
 class Form extends React.Component {
@@ -47,8 +47,8 @@ class Form extends React.Component {
                     <input type="text" value={this.state.lastName} onChange={(event) => { this.onHandleLastName(event) }} /><br />
                     <input type="submit" value="Submit" onClick={(event) => { this.onHandleSubmit(event) }} />
                 </form >
-                {/* <Prop name={'Hung'} age={'23'} arrJobs={this.state.arrJobs} /> */}
-                <FunctionComponent arrJobs={this.state.arrJobs} />
+                <Prop arrJobs={this.state.arrJobs} />
+                {/* <FunctionComponent arrJobs={this.state.arrJobs} /> */}
             </>
         );
     }
